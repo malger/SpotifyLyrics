@@ -1,0 +1,1274 @@
+{
+    "songs": [
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 6058780,
+                "vd": 22151.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 20.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 252372,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 10097938,
+                "vd": 20400.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 4039201,
+                "vd": 19509.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 1,
+            "fee": 8,
+            "mv": 0,
+            "v": 6,
+            "name": "Staying Power",
+            "id": 472045235,
+            "privilege": {
+                "id": 472045235,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 5524628,
+                "vd": 9600.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 15.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 230117,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 9207685,
+                "vd": 7100.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3683100,
+                "vd": 10500.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 2,
+            "fee": 8,
+            "mv": 0,
+            "v": 7,
+            "name": "Dancer",
+            "id": 472045236,
+            "privilege": {
+                "id": 472045236,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 6621144,
+                "vd": 16801.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 25.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 275825,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 11035211,
+                "vd": 19612.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 4414111,
+                "vd": 18937.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 3,
+            "fee": 8,
+            "mv": 0,
+            "v": 8,
+            "name": "Back Chat",
+            "id": 472045237,
+            "privilege": {
+                "id": 472045237,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 6534000,
+                "vd": 22549.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 15.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 272185,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 10889970,
+                "vd": 20669.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 4356014,
+                "vd": 22007.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 4,
+            "fee": 8,
+            "mv": 0,
+            "v": 6,
+            "name": "Body Language",
+            "id": 472045238,
+            "privilege": {
+                "id": 472045238,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 5152853,
+                "vd": 11411.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 15.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 214622,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 8588060,
+                "vd": 10305.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3435250,
+                "vd": 11266.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 5,
+            "fee": 8,
+            "mv": 0,
+            "v": 8,
+            "name": "Action This Day",
+            "id": 472045239,
+            "privilege": {
+                "id": 472045239,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 4842519,
+                "vd": 16750.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 10.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 201704,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 8070836,
+                "vd": 16849.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3228360,
+                "vd": 22336.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 6,
+            "fee": 8,
+            "mv": 0,
+            "v": 8,
+            "name": "Put Out the Fire",
+            "id": 472045240,
+            "privilege": {
+                "id": 472045240,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 5068844,
+                "vd": 11929.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 20.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 211132,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 8448044,
+                "vd": 8658.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3379244,
+                "vd": 11278.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 7,
+            "fee": 8,
+            "mv": 0,
+            "v": 9,
+            "name": "Life Is Real (Song for Lennon)",
+            "id": 472045241,
+            "privilege": {
+                "id": 472045241,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 5609265,
+                "vd": 9175.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 15.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 233650,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 9348746,
+                "vd": 7723.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3739524,
+                "vd": 7085.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 8,
+            "fee": 8,
+            "mv": 0,
+            "v": 8,
+            "name": "Calling All Girls",
+            "id": 472045242,
+            "privilege": {
+                "id": 472045242,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 6503906,
+                "vd": 10114.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 15.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 1416089,
+            "crbt": null,
+            "cf": "",
+            "dt": 270920,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 10839815,
+                "vd": 8972.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 4335952,
+                "vd": 12717.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 9,
+            "fee": 8,
+            "mv": 0,
+            "v": 10,
+            "name": "Las Palabras de Amor (The Words of Love)",
+            "id": 472045243,
+            "privilege": {
+                "id": 472045243,
+                "fee": 8,
+                "payed": 0,
+                "st": 0,
+                "pl": 128000,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 128000,
+                "toast": false,
+                "flag": 256,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 5017435,
+                "vd": 16077.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 40.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 564038,
+            "crbt": null,
+            "cf": "",
+            "dt": 209000,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 8362362,
+                "vd": 13068.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3344971,
+                "vd": 15654.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 10,
+            "fee": 8,
+            "mv": 0,
+            "v": 9,
+            "name": "Cool Cat",
+            "id": 472045244,
+            "privilege": {
+                "id": 472045244,
+                "fee": 0,
+                "payed": 0,
+                "st": -100,
+                "pl": 0,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 0,
+                "toast": false,
+                "flag": 128,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 41906,
+                    "name": "Queen",
+                    "tns": [
+                        "皇后乐队"
+                    ]
+                },
+                {
+                    "id": 31193,
+                    "name": "David Bowie",
+                    "tns": [
+                        "大卫.鲍伊"
+                    ]
+                }
+            ],
+            "al": {
+                "id": 35338714,
+                "name": "Hot Space",
+                "pic_str": "19139198904778035",
+                "pic": 19139198904778035
+            },
+            "st": 3,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 5898911,
+                "vd": 11523.0
+            },
+            "cd": "1",
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 75.0,
+            "rt": null,
+            "mst": 9,
+            "cp": 1416089,
+            "crbt": null,
+            "cf": "",
+            "dt": 245717,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 9831489,
+                "vd": 8366.0
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 3932622,
+                "vd": 11638.0
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "djId": 0,
+            "no": 11,
+            "fee": 8,
+            "mv": 0,
+            "v": 12,
+            "name": "Under Pressure",
+            "id": 472045245,
+            "privilege": {
+                "id": 472045245,
+                "fee": 8,
+                "payed": 0,
+                "st": 0,
+                "pl": 128000,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 128000,
+                "toast": false,
+                "flag": 256,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000,
+                "chargeInfoList": [
+                    {
+                        "rate": 128000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 0
+                    },
+                    {
+                        "rate": 192000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 320000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    },
+                    {
+                        "rate": 999000,
+                        "chargeUrl": null,
+                        "chargeMessage": null,
+                        "chargeType": 1
+                    }
+                ]
+            }
+        }
+    ],
+    "code": 200,
+    "album": {
+        "songs": [],
+        "paid": false,
+        "onSale": false,
+        "mark": 0,
+        "status": 0,
+        "tags": "",
+        "artists": [
+            {
+                "img1v1Id": 18686200114669622,
+                "topicPerson": 0,
+                "followed": false,
+                "picId": 0,
+                "alias": [],
+                "picUrl": "",
+                "trans": "",
+                "briefDesc": "",
+                "img1v1Url": "http://p4.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+                "musicSize": 0,
+                "albumSize": 0,
+                "name": "Queen",
+                "id": 41906,
+                "img1v1Id_str": "18686200114669622"
+            }
+        ],
+        "copyrightId": 0,
+        "picId": 19139198904778035,
+        "artist": {
+            "img1v1Id": 18686200114669622,
+            "topicPerson": 0,
+            "followed": false,
+            "picId": 281474976728145,
+            "alias": [],
+            "picUrl": "http://p4.music.126.net/ZeGMQ3drZWU4rjAJ20S7Sw==/281474976728145.jpg",
+            "trans": "皇后乐队",
+            "briefDesc": "",
+            "img1v1Url": "http://p4.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+            "musicSize": 1370,
+            "albumSize": 93,
+            "name": "Queen",
+            "id": 41906,
+            "transNames": [
+                "皇后乐队"
+            ],
+            "img1v1Id_str": "18686200114669622"
+        },
+        "alias": [],
+        "picUrl": "http://p3.music.126.net/b0iHt3eTDKoklyZrIGkh5g==/19139198904778035.jpg",
+        "pic": 19139198904778035,
+        "description": null,
+        "blurPicUrl": "http://p3.music.126.net/b0iHt3eTDKoklyZrIGkh5g==/19139198904778035.jpg",
+        "subType": "录音室版",
+        "briefDesc": "",
+        "publishTime": 390758400007,
+        "company": "环球唱片",
+        "commentThreadId": "R_AL_3_35338714",
+        "companyId": 0,
+        "name": "Hot Space",
+        "id": 35338714,
+        "type": "专辑",
+        "size": 11,
+        "picId_str": "19139198904778035",
+        "info": {
+            "commentThread": {
+                "id": "R_AL_3_35338714",
+                "resourceInfo": {
+                    "id": 35338714,
+                    "userId": -1,
+                    "name": "Hot Space",
+                    "imgUrl": "https://p1.music.126.net/b0iHt3eTDKoklyZrIGkh5g==/19139198904778035.jpg",
+                    "creator": null,
+                    "encodedId": null,
+                    "subTitle": null,
+                    "webUrl": null
+                },
+                "resourceType": 3,
+                "commentCount": 76,
+                "likedCount": 0,
+                "shareCount": 96,
+                "hotCount": 6,
+                "latestLikedUsers": null,
+                "resourceOwnerId": -1,
+                "resourceTitle": "Hot Space",
+                "resourceId": 35338714
+            },
+            "latestLikedUsers": null,
+            "liked": false,
+            "comments": null,
+            "resourceType": 3,
+            "resourceId": 35338714,
+            "threadId": "R_AL_3_35338714",
+            "commentCount": 76,
+            "likedCount": 0,
+            "shareCount": 96
+        }
+    }
+}

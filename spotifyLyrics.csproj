@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>spotifyLyrics.Program</StartupObject>
+    <Include>src</Include>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ElectronNET.API" Version="*"/>
+    <PackageReference Include="F23.StringSimilarity" Version="3.1.0"/>
+    <PackageReference Include="Newtonsoft.Json" Version="*"/>
+    <PackageReference Include="SpotifyAPI.Web" Version="6.0.0-beta.9"/>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="*"/>
+    <PackageReference Include="System.Reactive" Version="*"/>
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="*"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="electron.manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

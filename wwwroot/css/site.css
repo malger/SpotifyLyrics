@@ -1,0 +1,11 @@
+body {
+    color: brown;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-app-region: drag;
+}
+
+.textstroke {
+	color: brown;
+	font-size: 5rem;
+	-webkit-text-stroke: 0.1rem black;
+}
