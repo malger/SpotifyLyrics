@@ -13,18 +13,22 @@ namespace spotifyLyrics.Controllers{
     {
 
         IPlayerClient spotifyPlayer;
-        public LyricsController(SpotifyClient client)
+        public LyricsController(IPlayerClient player)
         {
-           spotifyPlayer = client.Player;
+            spotifyPlayer = player;
         }
 
         public IActionResult Index(){
+            Console.WriteLine("LyricsController called!");
             return View();
         }
 
 
         public async Task<ActionResult> Json(String query,String strategy = "NeteaseSong"){
             
+            if(spotifyPlayer == null)
+                return  Json(new Object());
+
             ILyricRetrievalStrategy retrievalStrategy;
             switch (strategy)
             {

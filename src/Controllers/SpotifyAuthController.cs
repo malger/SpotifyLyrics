@@ -17,6 +17,8 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using SpotifyAPI;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Http;
 
 namespace spotifyLyrics.Controllers{
 public class SpotifyAuthController : Controller { //: IHostedService{
@@ -24,7 +26,14 @@ public class SpotifyAuthController : Controller { //: IHostedService{
 
         private static readonly HttpClient client = new HttpClient();
 
-        readonly string redirect = "http://localhost:5000/SpotifyAuth";
+        // for webbrowser
+   //readonly string redirect = "http://localhost:5000/SpotifyAuth/cb";
+       
+       //for electron
+        //   readonly string redirect = "http://localhost:8001/SpotifyAuth/cb";
+
+   // readonly string redirect;
+
 
         private readonly IWritableOptions<SpotifySettings> _spotifySettings;
         private SpotifyPKCEauth pkce;
@@ -32,12 +41,12 @@ public class SpotifyAuthController : Controller { //: IHostedService{
         
             _spotifySettings = spotifySettings;
             this.pkce = auth;
-
             
         }
         private Uri genAuthUri(String[] scopes){
+                  var  redirect=  string.Format("{0}://{1}/SpotifyAuth/cb", HttpContext.Request.Scheme, HttpContext.Request.Host);
 
-            
+
             var req_scopes_enc = Uri.EscapeDataString(string.Join(" ",scopes));
 
             //TODO: add state param 
@@ -62,7 +71,11 @@ public class SpotifyAuthController : Controller { //: IHostedService{
            return ub.Uri;
         }
     
-    public async Task<IActionResult> Auth(String code){
+    public async Task<IActionResult> CB(String code){
+
+         var   redirect=  string.Format("{0}://{1}/SpotifyAuth/cb", HttpContext.Request.Scheme, HttpContext.Request.Host);
+
+
         var values = new Dictionary<string, string>
         {
             { "client_id", pkce.clientId },
@@ -82,7 +95,9 @@ public class SpotifyAuthController : Controller { //: IHostedService{
         var c = await content.ReadAsStringAsync();
         var responseString = await response.Content.ReadAsStringAsync();
         var authobj = JsonConvert.DeserializeObject<SpotifyAuthResponse>(responseString);
-        
+
+        //force refresh to be sure
+         authobj = await refreshToken(authobj.refresh_token,pkce.clientId);
         _spotifySettings.Update(opt => {
                 opt.Token = authobj.access_token;
                 opt.RefreshToken = authobj.refresh_token;
@@ -92,12 +107,13 @@ public class SpotifyAuthController : Controller { //: IHostedService{
     }
 
 
-     public IActionResult Index(){
+     public IActionResult Login(){
             Console.WriteLine("Spotify Login Registered");
             var scopes = new string[]{
                 Scopes.UserReadCurrentlyPlaying,
                 Scopes.UserReadPlaybackState,
                 Scopes.UserReadPlaybackPosition,
+                Scopes.UserModifyPlaybackState
                 };
             var uri = this.genAuthUri(scopes);
             return Redirect(uri.AbsoluteUri);

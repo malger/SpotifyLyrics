@@ -15,5 +15,12 @@ namespace SpotifyAPI{
 
         public string Token { get; set; }
 
+
+        public void updateSettings(SpotifyAuthResponse auth){
+            this.RefreshToken = auth.refresh_token;
+            this.Token = auth.access_token;
+        }
+        
+
     }
 }

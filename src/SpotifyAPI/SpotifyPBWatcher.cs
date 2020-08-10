@@ -1,6 +1,9 @@
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ElectronNET.API;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SpotifyAPI.Web;
@@ -10,10 +13,11 @@ namespace SpotifyAPI{
     {
 
     private readonly ILogger<SpotifyPBwatcher> _logger;
-    private Timer _timer;
+        private readonly IServiceProvider _services;
+        private Timer _timer;
 
-    private FullTrack lastPBtrack ;
-    private bool lastPBplaying ;
+    [ThreadStatic] private FullTrack lastPBtrack ;
+    [ThreadStatic] private bool lastPBplaying ;
 
 
     public event EventHandler SongChanged; 
@@ -21,17 +25,19 @@ namespace SpotifyAPI{
 
     public event EventHandler PBPlay; 
 
+
+
     float SECONDS = 3.0f;
 
-        readonly SpotifyClient _spotify;
-        public SpotifyPBwatcher(ILogger<SpotifyPBwatcher> logger,SpotifyClient c)
+        public SpotifyPBwatcher(ILogger<SpotifyPBwatcher> logger, IServiceProvider services)
         {
-            _spotify = c;
             _logger = logger;
+            _services = services;
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
+
             _logger.LogInformation("Started Watching Spotify Player state.");
             _logger.LogInformation($"Watching every {SECONDS} seconds");
 
@@ -41,49 +47,51 @@ namespace SpotifyAPI{
      private void WatchPB(object state)
     {
 
-
-        var pbinfo = _spotify.Player.GetCurrentPlayback().Result;
+        //dynamically get spotify to have a reference with an up to date token
+        var player = _services.GetService<IPlayerClient>();
+        try {
+        var pbinfo = player.GetCurrentPlayback().Result;
         if (pbinfo == null|| !(pbinfo.Item is FullTrack)) 
             return;
         var pbtrack = (FullTrack) pbinfo.Item;
 
         if (lastPBtrack==null) {
 
-            lock(this){
-                lastPBtrack = pbtrack; //first time init
-                lastPBplaying = pbinfo.IsPlaying;
-            }
+
+            lastPBtrack = pbtrack; //first time init
+            lastPBplaying = pbinfo.IsPlaying;
+
         }
 
         if (!lastPBtrack.Name.Equals(pbtrack.Name)){
             _logger.LogInformation("song changed");
             _logger.LogInformation(pbtrack.Name);
-            lock(this){
-                    lastPBtrack = pbtrack;
-            }
+            lastPBtrack = pbtrack;
+
             OnSongChanged(EventArgs.Empty);
         }
         if (!pbinfo.IsPlaying && lastPBplaying){
             _logger.LogInformation("pb paused");
-            lock(this){
-                lastPBplaying = false;
-            }
+            lastPBplaying = false;
             OnPBPause(EventArgs.Empty);
         }
         if (pbinfo.IsPlaying && !lastPBplaying){
             _logger.LogInformation("pb play");
-            lock(this){
-                lastPBplaying = true;
-            }
+            lastPBplaying = true;
             OnPBPlay(EventArgs.Empty);
         } 
+        } catch (Exception e){
+            _logger.LogError(e.Message);
+            return;
+        }
+        
        
     }
 
 
         public Task StopAsync(CancellationToken cancellationToken)
         {
-                _logger.LogInformation("Watchin PB stopped.");
+               _logger.LogInformation("Watchin PB stopped.");
               _timer?.Change(Timeout.Infinite, 0);
               return Task.CompletedTask;
         }
@@ -92,17 +100,26 @@ namespace SpotifyAPI{
       protected virtual void OnSongChanged(EventArgs e)
     {
         SongChanged?.Invoke(this, e);
+        var b = Electron.WindowManager.BrowserWindows.First();
+        Electron.IpcMain.Send(b,"song_changed","");
     }
 
     
       protected virtual void OnPBPause(EventArgs e)
     {
         PBpaused?.Invoke(this, e);
+        var b = Electron.WindowManager.BrowserWindows.First();
+
+        EventHandler pbPause = (s, e) => Electron.IpcMain.Send(b,"pause","");
+
     }
 
     
       protected virtual void OnPBPlay(EventArgs e)
     {
+        var b = Electron.WindowManager.BrowserWindows.First();
+
+        EventHandler pbPause = (s, e) => Electron.IpcMain.Send(b,"play","");
         PBPlay?.Invoke(this, e);
     }
 

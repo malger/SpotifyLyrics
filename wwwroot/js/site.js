@@ -3,28 +3,34 @@
 
 // Write your JavaScript code.
 
-const { ipcMain } = require('electron')
-
+const { ipcRenderer } = require('electron')
+// ipcMain = {};
+// ipcMain.on = function(a,b){};
 
 const byId = (x) => document.getElementById(x)
 
 const UPDATE_interval = 500; //MS
-var fetchedLyrics = {}; 
+const fetchedLyricsPH = [{"line":"No Lyrics found!","relativeTime":new Date(0)}];
+var fetchedLyrics = fetchedLyricsPH;
 var fetchedPBms = 0;
-
+var updateTextInt;
 document.addEventListener('DOMContentLoaded', async () => {
 
     lyricsTextEle = byId("curPBname");
 
     if (await isPlaying()){
         await fetchLyrics();
-        let updateTextInt = initLyricUpdater(); //update lyrics every 500ms
+        updateTextInt = initLyricUpdater(); //update lyrics every 500ms
     }
     
 
-    ipcMain.on('song_changed', (event, arg) => fetchLyrics());
-    ipcMain.on('pause', (event, arg) =>clearInterval(updateTextInt));
-    ipcMain.on('play', (event, arg) => updateTextInt = initLyricUpdater());
+    ipcRenderer.on('song_changed', async (event, arg) => {
+        clearInterval(updateTextInt);
+        await fetchLyrics()
+        updateTextInt = initLyricUpdater();
+    });
+    ipcRenderer.on('pause', (event, arg) =>clearInterval(updateTextInt));
+    ipcRenderer.on('play', (event, arg) => updateTextInt = initLyricUpdater());
 
 
 });
@@ -41,11 +47,16 @@ async function isPlaying(){
 async function fetchLyrics() {
 
     try {
+        lyricsTextEle.innerText = "fetching lyrics..."
         timerStart = new Date();
 
         const resp = await fetch("/Lyrics/json?strategy=NeteaseTF",{method:"GET"});
         const lyrics = await resp.json();
                         
+        if (!Array.isArray(lyrics)){
+            fetchedLyrics = fetchedLyricsPH;
+            return;
+        }
         fetchedLyrics = lyrics.map(e => ({
             "line" : e.line,
             "relativeTime" : new Date(e.relativeTime)
@@ -57,6 +68,8 @@ async function fetchLyrics() {
     } catch (e) {
         console.error("error fetching lyrics")
         console.debug(e.message)
+
+        
     }
     
 

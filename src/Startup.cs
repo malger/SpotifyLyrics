@@ -25,9 +25,9 @@ namespace spotifyLyrics
     {
 
 
-        DateTime lastTokenRefresh;
+        bool needSpotifyLogin=false;
+        bool startup= true;
 
-        bool justStarted = true;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,65 +36,50 @@ namespace spotifyLyrics
         public IConfiguration Configuration { get; }
 
 
-        private SpotifyAuthResponse refreshTokenAupdateConfig(String rtoken,String cid,IWritableOptions<SpotifySettings> sett){
-         var auth = SpotifyAuthController.refreshToken(rtoken,cid).Result;
-            lastTokenRefresh = DateTime.Now;
-            sett.Update(opts => opts.Token = auth.access_token);
-            sett.Update(opts => opts.RefreshToken = auth.refresh_token);
-            return auth;
-        }
+
 
         public void ConfigureServices(IServiceCollection services)
         {
          
-          services.AddLogging();
-          services.AddSingleton<SpotifyPKCEauth>();
+            services.AddLogging();
+            services.AddSingleton<SpotifyPKCEauth>();
+            services.AddSingleton<SpotifySettings>(sv =>{
+                return new SpotifySettings(){
+                    Token = Configuration["Spotify:Token"],
+                    RefreshToken = Configuration["Spotify:RefreshToken"],
+                    ClientId = Configuration["Spotify:ClientId"]
 
-
-        services.AddTransient<SpotifyClient>(sprov =>{
-
-
-                 var spSettings = sprov.GetService<IWritableOptions<SpotifySettings>>();
-                var atoken = Configuration["Spotify:Token"];
-                var rtoken = Configuration["Spotify:RefreshToken"];
-                var cid = Configuration["Spotify:ClientId"];
-
-
-
-                //refresh token exists -> execute a refresh at startup
-                if (justStarted && rtoken.Length>0) {
-                    justStarted = false;
-                    var auth = refreshTokenAupdateConfig(rtoken,cid,spSettings);
-                    return new SpotifyClient(auth.access_token);
-                } 
-                //refresh token if time elapsed gt threshold
-                if(rtoken.Length>0 && ((DateTime.Now-lastTokenRefresh).Milliseconds > 3200)) { //default token expire time is 3600ms 
-                    var auth = refreshTokenAupdateConfig(rtoken,cid,spSettings);
-                    return new SpotifyClient(auth.access_token);
-                }
-                //if there is an access token use it!
-                if (atoken.Length>0){
-                        return new SpotifyClient(atoken);
-                }
-                // expect user to login first
-                throw new Exception("provide a token first. use login endpoint on spotifyauth controller");
-
+                };
             });
-
-            services.AddSingleton<IHostedService,SpotifyPBwatcher>();
-
+        
             services.ConfigureWritable<SpotifySettings>(Configuration.GetSection("Spotify"));
 
             services.AddSingleton<IServiceCollection,ServiceCollection>();
 
+            services.AddSingleton<SpotifyPlayerFactory>();
+            
+
+            services.AddTransient<IPlayerClient>(svp =>{
+                    var spfac = svp.GetService<SpotifyPlayerFactory>();
+                    var p=  spfac.GetSpotifyPlayer(startup);
+                    startup = startup?false:false;
+                    return p;
+
+            });
+
+           services.AddHostedService<SpotifyPBwatcher>();
+
+
+
+
             services.AddControllersWithViews();
-          services.AddHttpClient();
-          services.AddHealthChecks();
+            services.AddHttpClient();
+            services.AddHealthChecks();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env , IHostApplicationLifetime appLifetime)//,IPlayer player,ILogger<Startup> logger)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env , IHostApplicationLifetime appLifetime,SpotifyPlayerFactory spfac)//,IPlayer player,ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
@@ -113,19 +98,33 @@ namespace spotifyLyrics
 
             app.UseAuthorization();
 
+            //at startup refresh token
+            needSpotifyLogin = !spfac.AccessTokenPresent();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+                if(needSpotifyLogin){
+                    Console.WriteLine("request auth");
+                    endpoints.MapControllerRoute(
+                        name: "default",
+                    // pattern: "{controller=Lyrics}/{action=index}");
+                    pattern: "{controller=SpotifyAuth}/{action=login}");
+                } else {
+                    Console.WriteLine("skip auth");
+                  endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Lyrics}/{action=index}");
+                   // pattern: "{controller=Lyrics}/{action=index}");
+                  pattern: "{controller=Lyrics}/{action=index}");
+                }
+
            //    endpoints.MapHealthChecks("/health");
             });
             
            //  appLifetime.ApplicationStarted.Register(OnApplicationStartedAsync(tokenRefresh).Wait);
 
             BrowserWindowOptions browserWindowOptions = new BrowserWindowOptions();
-         //   browserWindowOptions.Frame = false;
-           // browserWindowOptions.Transparent = true;
+           browserWindowOptions.Frame = false;
+           browserWindowOptions.Transparent = true;
             browserWindowOptions.AlwaysOnTop = true;
                                 browserWindowOptions.WebPreferences = new WebPreferences
                     {

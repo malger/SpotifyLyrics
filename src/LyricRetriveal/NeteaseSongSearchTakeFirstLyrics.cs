@@ -23,7 +23,7 @@ public class NeteaseSongSearchTakeFirstLyrics : ILyricRetrievalStrategy
                 return null;
             }
             var lyricsob = await api163.GetLyric(sug.Result.Songs[0].Id);
-            if (lyricsob.Lrc.Lyric == null)
+            if (lyricsob.Lrc ==null || lyricsob.Lrc.Lyric == null)
                 return null;
             if (!lyricsob.Lrc.Lyric.Contains("[")) //no synced lyrics
                 return null;

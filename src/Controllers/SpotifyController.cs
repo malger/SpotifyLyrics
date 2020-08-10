@@ -27,33 +27,51 @@ namespace spotifyLyrics.Controllers
         private static readonly DateTime Epoch = new DateTime(1970, 1, 1, 0, 0, 0,
                                                DateTimeKind.Utc);
 
-        private readonly SpotifyClient _spotify;
         private readonly ILogger<SpotifyController> _logger;
+        private readonly IServiceProvider _services;
+        private readonly IPlayerClient _player;
 
-        public SpotifyController(ILogger<SpotifyController> logger, SpotifyClient spotify)
+        public SpotifyController(ILogger<SpotifyController> logger, IServiceProvider services,IPlayerClient spotifyplayer)
         {
-            _spotify = spotify;
+
             _logger = logger;
+            _services = services;
+            _player = spotifyplayer;
 
         }
 
         public async Task<string> Song() {
-            var pb = await _spotify.Player.GetCurrentPlayback();
-            if (pb != null && pb.Item != null && pb.Item is FullTrack)
-                return ((FullTrack) pb.Item).Name;
-            _logger.LogWarning("no plackback. returning empty string as song");
-            return "";
+            try {
+                var pb = await _player.GetCurrentPlayback();
+                if (pb != null && pb.Item != null && pb.Item is FullTrack)
+                    return ((FullTrack) pb.Item).Name;
+                return "";
+            } catch (Exception e){
+                _logger.LogWarning("no plackback. returning empty string as song");
+                return "";
+            }
+           
         } 
 
         public async Task<bool> isPlaying()  {
-            var pb = await _spotify.Player.GetCurrentPlayback();
-            return pb==null?false:pb.IsPlaying;
+            try {
+                var pb = await _player.GetCurrentPlayback();
+                return pb==null?false:pb.IsPlaying;
+
+            } catch (Exception e){
+                return false;
             }
+        }
 
 
-        public async Task<DateTime> SongMS() {
-            var pb = await _spotify.Player.GetCurrentPlayback();
-            return pb!=null?Epoch.AddMilliseconds(pb.ProgressMs):Epoch;
+        public async Task<DateTime> SongMS() { 
+            try {
+                var pb = await _player.GetCurrentPlayback();
+                return pb!=null?Epoch.AddMilliseconds(pb.ProgressMs):Epoch;
+
+            } catch (Exception e){
+                return Epoch;
+            }
 
         } 
 
